@@ -1,0 +1,8 @@
+docker build - < Dockerfile
+docker tag f8e0548e7004 abureyanahmed/cgal:firsttry
+docker images
+docker push abureyanahmed/cgal:firsttry
+
+singularity pull --name cgal.simg docker://abureyanahmed/cgal:firsttry
+singularity shell cgal.simg
+singularity exec cgal.simg python3
